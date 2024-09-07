@@ -1,12 +1,52 @@
 # ------------------------------------------------------------------------
 
 # Lab 1
+# Excercise 1: Lists in Python
 # Problem 1
-# Put your solution here, make sure I can run it by running this file. Do not submit it commented out.
+my_list = [1,5,'apple',20.5]
 
 # Problem 2
-# Put your solution here, make sure I can run it by running this file. Do not submit it commented out.
+my_list = [1,5,'apple',20.5]
+print(my_list[2])
 
+# Problem 3
+def add_elements(my_list = [1,5,'apple',20.5]):
+    my_list.append(10)
+    print(my_list)
+
+# Problem 4
+def remove_elements(my_list = [1,5,'apple',20.5]):
+    my_list.remove(20.5)
+    print(my_list)
+
+# Problem 5
+def reverse_elements(my_list = [1,5,'apple',20.5]):
+    my_list.reverse()
+    print(my_list)
+
+# Excercise 2: Dictionaries in Python
+# Problem 1
+person = {'name': 'John', 'age': '30', 'job': 'teacher'}
+print(person)
+
+# Problem 2
+person = {'name': 'John', 'age': '30', 'job': 'teacher'}
+print(person['job'])
+
+# Problem 3
+def add_pair(person = {'name': 'John', 'age': '30', 'job': 'teacher'}):
+    person['city'] = 'Paris'
+print(person)
+
+# Problem 4
+def remove_key(person = {'name': 'John', 'age': '30', 'job': 'teacher'}):
+    del person['age']
+    print(person)
+
+# Problem 5
+def iterate_items(person = {'name': 'John', 'age': '30', 'job': 'teacher'}):
+    for key, value in person.items():
+        print(f"{key}: {value}")
 # -----------------------------------------------------------------------------
 
 
