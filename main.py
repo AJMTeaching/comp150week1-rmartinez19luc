@@ -159,7 +159,10 @@ def word_lengths(words: list) -> list:
     Returns:
     - list: A list containing the lengths of the words
     """
-    
+    lengths = []
+    for word in words:
+        lengths.append(len(word))
+    return lengths
 
     # TODO: Implement this function
     pass
@@ -188,8 +191,13 @@ def reverse_string(s: str) -> str:
     Returns:
     - str: The reversed string
     """
+    reversed_s = ""
+    for char in s:
+        reversed_s = char + reversed_s  # Prepend each character
+    return reversed_s
     # TODO: Implement this function
     pass
+    
 
 
 # Unit Tests for reverse_string
@@ -217,6 +225,13 @@ def intersection(list1: list, list2: list) -> list:
     Returns:
     - list: The intersection of the two lists
     """
+    result = []
+    for item1 in list1:
+        for item2 in list2:
+            if item1 == item2 and item1 not in result:
+                result.append(item1)
+    return result
+
     # TODO: Implement this function
     pass
 
