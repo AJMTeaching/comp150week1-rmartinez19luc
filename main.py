@@ -77,7 +77,7 @@ def count_vowels(s: str) -> int:
     vowel_count = 0
     for char in s:
         if char in vowels:
-            vowel_count += 0
+            vowel_count += 1
     return vowel_count
 
     # TODO: Implement this function
