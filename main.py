@@ -6,23 +6,19 @@
 my_list = [1,5,'apple',20.5]
 
 # Problem 2
-my_list = [1,5,'apple',20.5]
 print(my_list[2])
 
 # Problem 3
-def add_elements(my_list = [1,5,'apple',20.5]):
-    my_list.append(10)
-    print(my_list)
+my_list.append(10)
+print(my_list)
 
 # Problem 4
-def remove_elements(my_list = [1,5,'apple',20.5]):
-    my_list.remove(20.5)
-    print(my_list)
+my_list.remove(20.5)
+print(my_list)
 
 # Problem 5
-def reverse_elements(my_list = [1,5,'apple',20.5]):
-    my_list.reverse()
-    print(my_list)
+my_list=my_list[::-1]
+print(my_list)
 
 # Excercise 2: Dictionaries in Python
 # Problem 1
@@ -30,23 +26,19 @@ person = {'name': 'John', 'age': '30', 'job': 'teacher'}
 print(person)
 
 # Problem 2
-person = {'name': 'John', 'age': '30', 'job': 'teacher'}
 print(person['job'])
 
 # Problem 3
-def add_pair(person = {'name': 'John', 'age': '30', 'job': 'teacher'}):
-    person['city'] = 'Paris'
+person.update({'city': 'Paris'})
 print(person)
 
 # Problem 4
-def remove_key(person = {'name': 'John', 'age': '30', 'job': 'teacher'}):
-    del person['age']
-    print(person)
+del person['age']
+print(person)
 
 # Problem 5
-def iterate_items(person = {'name': 'John', 'age': '30', 'job': 'teacher'}):
-    for key, value in person.items():
-        print(f"{key}: {value}")
+for key, value in person.items():
+    print(f"{key}: {value}")
 # -----------------------------------------------------------------------------
 
 
@@ -75,8 +67,8 @@ def count_vowels(s: str) -> int:
     """
     vowels = 'aeiouAEIOU'
     vowel_count = 0
-    for char in s:
-        if char in vowels:
+    for character in s:
+        if character in vowels:
             vowel_count += 1
     return vowel_count
 
@@ -113,6 +105,7 @@ def merge_lists(list1: list, list2: list) -> list:
     i = j = 0
     merged_list = []
     while i < len(list1) and j < len(list2):
+        # we're comparing list1[0] to list2[0]
         if list1[i] < list2[j]:
             merged_list.append(list1[i])
             i += 1
@@ -191,10 +184,7 @@ def reverse_string(s: str) -> str:
     Returns:
     - str: The reversed string
     """
-    reversed_s = ""
-    for char in s:
-        reversed_s = char + reversed_s  # Prepend each character
-    return reversed_s
+    return s[::-1]
     # TODO: Implement this function
     pass
     
@@ -226,11 +216,10 @@ def intersection(list1: list, list2: list) -> list:
     - list: The intersection of the two lists
     """
     result = []
-    for item1 in list1:
-        for item2 in list2:
-            if item1 == item2 and item1 not in result:
-                result.append(item1)
-    return result
+    for item in list1:
+        if item in list2:
+             result.append(item)
+    return list(set(overlapped_list))
 
     # TODO: Implement this function
     pass
