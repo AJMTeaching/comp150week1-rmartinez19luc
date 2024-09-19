@@ -219,7 +219,7 @@ def intersection(list1: list, list2: list) -> list:
     for item in list1:
         if item in list2:
              result.append(item)
-    return list(set(overlapped_list))
+    return list(set(result))
 
     # TODO: Implement this function
     pass
